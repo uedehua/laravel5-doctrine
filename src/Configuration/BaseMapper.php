@@ -5,7 +5,7 @@ namespace UeDehua\LaravelDoctrine\Configuration;
 /**
  * @author 陈德华 <mr.sk@qq.com>
  */
-interface Mapper
+interface BaseMapper
 {
 
     /**

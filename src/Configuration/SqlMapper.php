@@ -2,10 +2,11 @@
 
 namespace UeDehua\LaravelDoctrine\Configuration;
 
+use UeDehua\LaravelDoctrine\Configuration\BaseMapper;
 /**
  * @author 陈德华 <mr.sk@qq.com>
  */
-class SqlMapper implements Mapper
+class SqlMapper implements BaseMapper
 {
 
     /**

@@ -3,6 +3,7 @@
 namespace UeDehua\LaravelDoctrine\Cache;
 
 use Doctrine\Common\Cache\MemcachedCache;
+use UeDehua\LaravelDoctrine\Cache\BaseProvider;
 
 /**
  * @author 陈德华 <mr.sk@qq.com>

@@ -3,6 +3,7 @@
 namespace UeDehua\LaravelDoctrine\Cache;
 
 use Doctrine\Common\Cache\RedisCache;
+use UeDehua\LaravelDoctrine\Cache\BaseProvider;
 
 /**
  * @author 陈德华 <mr.sk@qq.com>
