@@ -9,7 +9,7 @@ use Doctrine\Common\Cache\MemcachedCache;
  * @link http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/caching.html
  */
 
-class MemcachedProvider implements Provider
+class MemcachedProvider implements BaseProvider
 {
 
     public function make($config = null)

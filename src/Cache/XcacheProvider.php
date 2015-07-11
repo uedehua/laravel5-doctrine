@@ -8,7 +8,7 @@ use Doctrine\Common\Cache\XcacheCache;
  * @author 陈德华 <mr.sk@qq.com>
  * @link http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/caching.html
  */
-class XcacheProvider implements Provider
+class XcacheProvider implements BaseProvider
 {
     public function make($config = null)
     {

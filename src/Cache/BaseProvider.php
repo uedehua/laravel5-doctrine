@@ -2,7 +2,7 @@
 
 namespace UeDehua\LaravelDoctrine\Cache;
 
-interface Provider
+interface BaseProvider
 {
     public function make($config = null);
     

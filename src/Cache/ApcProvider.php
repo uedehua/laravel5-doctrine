@@ -6,7 +6,7 @@ namespace UeDehua\LaravelDoctrine\Cache;
  * @author 陈德华 <mr.sk@qq.com>
  * @link http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/caching.html
  */
-class ApcProvider implements Provider
+class ApcProvider implements BaseProvider
 {
 
     public function make($config = null)

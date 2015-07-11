@@ -8,7 +8,7 @@ use Doctrine\Common\Cache\RedisCache;
  * @author 陈德华 <mr.sk@qq.com>
  * @link http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/caching.html
  */
-class RedisProvider implements Provider
+class RedisProvider implements BaseProvider
 {
     public function make($config = null)
     {
