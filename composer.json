@@ -6,7 +6,7 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-        "Illuminate/support": "5.1.*",
+        "laravel/framework": "5.1.*",
         "doctrine/orm": "2.6.*",
         "doctrine/cache": "1.4.*",
         "doctrine/migrations": "dev-master"
