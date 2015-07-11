@@ -2,7 +2,6 @@
 
 namespace UeDehua\LaravelDoctrine\Validation;
 
-use EntityManager;
 use Doctrine\ORM\Query\ResultSetMapping;
 use Doctrine\ORM\EntityManagerInterface;
 use Illuminate\Validation\PresenceVerifierInterface;

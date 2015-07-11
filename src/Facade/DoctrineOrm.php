@@ -1,10 +1,10 @@
 <?php
 
-namespace UeDehua\LaravelDoctrine;
+namespace UeDehua\LaravelDoctrine\Facade;
 
 use Illuminate\Support\Facades\Facade;
 
-class DoctrineOrmFacade extends Facade
+class DoctrineOrm extends Facade
 {
 
     /**

@@ -2,7 +2,7 @@
 
 namespace UeDehua\LaravelDoctrine\EventListeners;
 
-use Doctrine\ORM\Event\LoadClassMetadataEventArgs;
+use Doctrine\ORM\Event\OnFlushEventArgs;
 
 class SoftDeletableListener
 {
