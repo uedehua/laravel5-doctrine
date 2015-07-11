@@ -6,7 +6,7 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-        "illuminate/support": "5.1.*",
+        "Illuminate/support": "5.1.*",
         "doctrine/orm": "2.6.*",
         "doctrine/migrations": "1.*"
     },
