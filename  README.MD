@@ -41,7 +41,7 @@ Begin by installing the package through Composer. Edit your project's `composer.
 
 ```php
 "require": {
-    "uedehua/laravel5-doctrine": "0.5.*"
+    "uedehua/laravel5-doctrine": "5.1.*"
 }
 ```
 
