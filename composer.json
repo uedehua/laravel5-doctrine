@@ -1,10 +1,19 @@
 {
     "name": "uedehua/laravel5-doctrine",
     "description": "The Doctrine Orm Form Laravel Framework.",
-    "keywords": ["framework", "laravel","doctrine"],
+    "keywords": ["framework", "laravel", "doctrine"],
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": ">=5.5.9"
-    }
+        "php": ">=5.5.9",
+        "illuminate/support": "5.1.*",
+        "doctrine/orm": "2.6.*",
+        "doctrine/migrations": "1.*"
+    },
+    "authors": [
+        {
+            "name": "陈德华",
+            "email": "mr.sk@qq.com"
+        }
+    ]
 }
