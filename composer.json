@@ -25,6 +25,9 @@
         }
     },
     "scripts": {
+        "post-install-cmd": [
+            "php artisan vendor:publish  --provider=UeDehua\\LaravelDoctrine\\DoctrineOrmProvider"
+        ]
     },
     "prefer-stable": true
 }

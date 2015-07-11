@@ -20,6 +20,7 @@ use UeDehua\LaravelDoctrine\EventListeners\SoftDeletableListener;
 use UeDehua\LaravelDoctrine\EventListeners\TablePrefix;
 use UeDehua\LaravelDoctrine\Filters\TrashedFilter;
 use UeDehua\LaravelDoctrine\Validation\DoctrinePresenceVerifier;
+use UeDehua\LaravelDoctrine\Provider\DoctrineOrmUserProvider;
 
 class LaravelDoctrineServiceProvider extends ServiceProvider
 {
@@ -33,8 +34,8 @@ class LaravelDoctrineServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/config/doctrine.php' => config_path('doctrine.php'),
-        ]);
+            __DIR__ . '/config/doctrine.php' => config_path('doctrine.php'),
+                ], 'config');
         $this->extendAuthManager();
     }
 
@@ -141,7 +142,7 @@ class LaravelDoctrineServiceProvider extends ServiceProvider
     private function extendAuthManager()
     {
         Auth::extend('doctrine', function ($app) {
-            return new DoctrineUserProvider(
+            return new DoctrineOrmUserProvider(
                     $app['Illuminate\Contracts\Hashing\Hasher'], $app[EntityManager::class], $app['config']['auth.model']
             );
         });
