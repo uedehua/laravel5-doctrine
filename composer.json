@@ -1,0 +1,10 @@
+{
+    "name": "uedehua/laravel5-doctrine",
+    "description": "The Doctrine Orm Form Laravel Framework.",
+    "keywords": ["framework", "laravel","doctrine"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=5.5.9"
+    }
+}
