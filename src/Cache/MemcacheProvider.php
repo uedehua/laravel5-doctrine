@@ -4,7 +4,10 @@ namespace UeDehua\LaravelDoctrine\Cache;
 
 use Doctrine\Common\Cache\MemcacheCache;
 
-//use Memcache;
+/**
+ * @author 陈德华 <mr.sk@qq.com>
+ * @link http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/caching.html
+ */
 
 class MemcacheProvider implements Provider
 {
@@ -21,7 +24,7 @@ class MemcacheProvider implements Provider
         return $cache;
     }
 
-    public function isAppropriate($provider)
+    public function getName($provider)
     {
         return $provider == 'memcache';
     }

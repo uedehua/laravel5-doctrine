@@ -2,6 +2,10 @@
 
 namespace UeDehua\LaravelDoctrine\Cache;
 
+/**
+ * @author 陈德华 <mr.sk@qq.com>
+ * @link http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/caching.html
+ */
 class ApcProvider implements Provider
 {
 
@@ -14,7 +18,7 @@ class ApcProvider implements Provider
         return new ApcCache();
     }
 
-    public function isAppropriate($provider)
+    public function getName($provider)
     {
         return $provider == 'apc';
     }

@@ -11,7 +11,9 @@ return [
         'namespace' => null
     ],
     // Available: null, apc, xcache, redis, memcache
-    'cache_provider' => null,
+    'cache_provider' => 'array',
+    'query_cache'   => 'array',
+    'result_cache'  => 'array',
     'cache' => [
         'redis' => [
             'host' => '127.0.0.1',
