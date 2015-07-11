@@ -7,7 +7,7 @@ use Doctrine\ORM\Tools\SchemaTool;
 use Doctrine\ORM\Mapping\ClassMetadataFactory;
 use Symfony\Component\Console\Input\InputOption;
 
-class SchemaDropCommand extends Command
+class SchemaUpdateCommand extends Command
 {
 
     /**
@@ -15,14 +15,14 @@ class SchemaDropCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'doctrine:schema:drop';
+    protected $signature = 'doctrine:schema:update';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Drop database schema';
+    protected $description = 'Update database schema to match models';
 
     /**
      * The schema tool.
@@ -47,7 +47,9 @@ class SchemaDropCommand extends Command
 
     protected function configure()
     {
-        $this->addOption('show-sql', false, InputOption::VALUE_NONE, 'Dumps SQL query and does not execute drop.');
+        $this->addOption('sql', false, InputOption::VALUE_NONE, 'Dumps SQL query and does not execute update.'
+        );
+        $this->addOption('clean', null, InputOption::VALUE_OPTIONAL, 'When using clean model all non-relevant to this metadata assets will be cleared.');
     }
 
     /**
@@ -57,18 +59,20 @@ class SchemaDropCommand extends Command
      */
     public function handle()
     {
-        $sql = $this->tool->getDropSchemaSQL($this->metadata->getAllMetadata());
+        $this->info('Checking if database needs updating....');
+        $clean = $this->option('clean');
+        $sql = $this->tool->getUpdateSchemaSql($this->metadata->getAllMetadata(), $clean);
         if (empty($sql)) {
-            $this->info('Current models do not exist in schema.');
+            $this->info('No updates found.');
             return;
         }
-        if ($this->option('show-sql')) {
-            $this->info('Outputting drop query:');
+        if ($this->option('sql')) {
+            $this->info('Outputting update query:');
             $this->info(implode(';' . PHP_EOL, $sql));
         } else {
-            $this->info('Dropping database schema....');
-            $this->tool->dropSchema($this->metadata->getAllMetadata());
-            $this->info('Schema has been dropped!');
+            $this->info('Updating database schema....');
+            $this->tool->updateSchema($this->metadata->getAllMetadata());
+            $this->info('Schema has been updated!');
         }
     }
 
