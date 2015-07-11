@@ -1,7 +1,7 @@
 {
     "name": "uedehua/laravel5-doctrine",
     "description": "The Doctrine Orm Form Laravel Framework.",
-    "version":"5.1.1",
+    "version": "5.1.1",
     "keywords": ["framework", "laravel", "doctrine"],
     "license": "MIT",
     "type": "project",
@@ -26,9 +26,5 @@
     },
     "scripts": {
     },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "5.1.x-dev"
-        }
-    }
+    "prefer-stable": true
 }

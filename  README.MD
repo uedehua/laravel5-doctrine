@@ -26,18 +26,18 @@ Begin reading [the full documentation](https://github.com/uedehua/laravel5-doctr
 
 ## Caveats
 
-At the moment Doctrine\migrations version 1.0 is still in alpha. As a result the composer install may require you to change
+As a result the composer install may require you to change
 the `minimum-stability` in your `composer.json` to `dev`.
 
-If you don't want to affect the stability of the rest of the packages, you can add the following property in your `composer.json`:
+如果你不想影响其他包的稳定性, 您可以在您的 `composer.json`增加下面的属性:
 
 "prefer-stable": true
 
-## Installation
+## 安装
 
-Begin by installing the package through Composer. Edit your project's `composer.json` to require `uedehua/laravel5-doctrine`.
+通过Composer安装之前,编辑你项目的 `composer.json` 文件,添加 `uedehua/laravel5-doctrine`.
 
-> This package is still in it's early stages, but fully functional. Is it possible that the API might change slightly, no drastic changes.
+> 这个代码还处于早期阶段，但功能齐全。可以预料会有一些小得变化，不会有大得变动.
 
 ```php
 "require": {
@@ -45,25 +45,25 @@ Begin by installing the package through Composer. Edit your project's `composer.
 }
 ```
 
-Next use Composer to update your project from the the Terminal:
+接下来，通过Composer命令更新你得项目:
 
 ```php
-php composer.phar update
+php composer update
 ```
 
-Once the package has been installed you'll need to add the service provider. Open your `app/config/app.php` configuration file, and add a new item to the `providers` array.
+一旦安装了包，您需要添加服务供应商. 打开项目 `app/config/app.php` 配置文件, 在`providers`数组内添加新的项目.
 
 ```php
 'UeDehua\LaravelDoctrine\Provider\DoctrineOrmProvider'
 ```
 
-After This you'll need to add the facade. Open your `app/config/app.php` configuration file, and add a new item to the `aliases` array.
+接下来添加Facade. 打开 `app/config/app.php` 配置文件, 在`aliases`数组内添加新的项目.
 
 ```php
 'DoctrineOrm' => 'UeDehua\LaravelDoctrine\Facade\DoctrineOrm'
 ```
 
-It's recommended to publish the package configuration.
+别忘记发布你的配置.
 
 ```php
 php artisan config:publish uedehua/laravel5-doctrine --path=vendor/uedehua/laravel5-doctrine/config

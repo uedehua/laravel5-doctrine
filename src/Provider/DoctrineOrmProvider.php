@@ -32,7 +32,9 @@ class LaravelDoctrineServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        $this->publishes('uedehua/laravel5-doctrine', 'doctrine', __DIR__ . '/..');
+        $this->publishes([
+            __DIR__.'/config/doctrine.php' => config_path('doctrine.php'),
+        ]);
         $this->extendAuthManager();
     }
 
