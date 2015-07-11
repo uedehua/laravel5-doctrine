@@ -8,12 +8,21 @@
         "php": ">=5.5.9",
         "Illuminate/support": "5.1.*",
         "doctrine/orm": "2.6.*",
-        "doctrine/migrations": "1.*"
+        "doctrine/cache": "1.4.*",
+        "doctrine/migrations": "dev-master"
     },
     "authors": [
         {
             "name": "陈德华",
             "email": "mr.sk@qq.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "UeDehua\\LaravelDoctrine\\": "src/",
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
