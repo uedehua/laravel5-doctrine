@@ -24,14 +24,6 @@ Begin reading [the full documentation](https://github.com/uedehua/laravel5-doctr
   3. [元数据](https://github.com/uedehua/laravel5-doctrine/wiki/Metadata)
 5. [MIT License](https://github.com/uedehua/laravel5-doctrine/blob/master/LICENSE)
 
-## 附加说明
-
-As a result the composer install may require you to change
-the `minimum-stability` in your `composer.json` to `dev`.
-
-如果你不想影响其他包的稳定性, 您可以在您的 `composer.json`增加下面的属性:
-
-"prefer-stable": true
 
 ## 安装
 
