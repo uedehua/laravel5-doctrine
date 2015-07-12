@@ -1,4 +1,4 @@
-# Doctrine 2 for Laravel
+# Doctrine 2 for Laravel5
 
 [![Latest Stable Version](https://poser.pugx.org/uedehua/laravel5-doctrine/version.png)](https://packagist.org/packages/uedehua/laravel5-doctrine)
 [![License](https://poser.pugx.org/uedehua/laravel5-doctrine/license.png)](https://packagist.org/packages/uedehua/laravel5-doctrine)

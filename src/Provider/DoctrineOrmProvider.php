@@ -114,6 +114,7 @@ class LaravelDoctrineServiceProvider extends ServiceProvider
             if (isset($config['proxy']['namespace'])){
                 $metadata->setProxyNamespace($config['proxy']['namespace']);
             }
+            
             $eventManager = new EventManager();
             $connection_config = $this->mapLaravelToDoctrineConfig($app['config']);
             
