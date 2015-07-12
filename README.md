@@ -71,7 +71,7 @@ php artisan config:publish uedehua/laravel5-doctrine --path=vendor/uedehua/larav
 
 这个包使用 Laravel5 本身的数据库配置, 通过 [Entity Manager](https://github.com/uedehua/laravel5-doctrine/wiki/Entity-Manager) facade (or service locator) 与数据库进行交互.
 请参阅 [Doctrine 2](http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/index.html) 文档.
-The little example below shows how to use the EntityManager in it simplest form.
+下面的小例子展示了如何在它最简单的形式使用Doctrine ORM.
 
 ```php
 <?php
@@ -83,7 +83,7 @@ EntityManager::persist($user);
 EntityManager::flush();
 ```
 
-The `User` used in the example above looks like this.
+添加一个用户到数据库.
 
 ```php
 <?php
@@ -125,37 +125,7 @@ class User
 }
 ```
 
-If you've only used Eloquent and its models this might look bloated or frightening, but it's actually very simple. Let me break the class down.
-
-```php
-<?php
-
-use Doctrine\ORM\Mapping AS ORM;
-
-/**
- * @ORM\Entity
- * @ORM\Table(name="hk_user")
- */
-class User
-{
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
-    private $id;
-
-    /**
-     * @ORM\Column(type="string")
-     */
-    private $name;
-}
-```
-
-The only thing that's actually important in this `entity` are the properties. This shows you which data the `entity` holds.
-
-With Doctrine 2 you can't interact with database by using the entity `User`. You'll have to use [Entity Manager](https://github.com/uedehua/laravel5-doctrine/wiki/Entity-Manager) and `repositories`.
-This does create less overhead since your entities aren't extending the whole Eloquent `model` class. Which can dramatically slow down your application a lot if you're working with thousands or millions of records.
+User实体基于Annotation，更多请参阅官方文档。
 
 ## License
 
