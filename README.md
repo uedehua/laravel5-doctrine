@@ -69,8 +69,8 @@ php artisan config:publish uedehua/laravel5-doctrine --path=vendor/uedehua/larav
 
 ## 2 Minutes
 
-这个包使用 Laravel5 本身的数据库配置, With the [Entity Manager](https://github.com/uedehua/laravel5-doctrine/wiki/Entity-Manager) facade (or service locator) you can interact with repositories.
-It might be wise to [check out the Doctrine 2 docs](http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/index.html) to know how it works.
+这个包使用 Laravel5 本身的数据库配置, 通过 [Entity Manager](https://github.com/uedehua/laravel5-doctrine/wiki/Entity-Manager) facade (or service locator) 与数据库进行交互.
+请参阅 [Doctrine 2](http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/index.html) 文档.
 The little example below shows how to use the EntityManager in it simplest form.
 
 ```php
